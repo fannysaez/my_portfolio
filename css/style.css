@@ -1,0 +1,341 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+/* BODY */
+body{
+    background-color: #1b7a9f;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+/* HEADER */
+h1{
+   font-size: 48px;
+   color:white;
+   font-family: monospace;
+}
+.typewriter {
+   display:flex;
+   justify-content: center;
+   padding-top: 100px;
+   padding-bottom: 100px;
+ }
+ .typewriter h1 {
+   color: white;
+   font-family: monospace;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: 0.1em solid white; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation: 
+     typing-animation 3.5s steps(30, end),
+     blink-animation .5s step-end infinite;
+   padding-right:10px; 
+ }
+ 
+ /* The typing effect */
+ @keyframes typing-animation {
+   from { width: 0 }
+   to { width: 35% }
+ }
+ 
+ /* The typewriter cursor effect */
+ @keyframes blink-animation {
+   from, to { border-color: transparent }
+   50% { border-color: white }
+ }
+
+/* Effet marchine à écire */
+
+p{
+    line-height: 30px;
+    text-align: justify;
+}
+/* MAIN */
+main{
+   width: 1024px;
+   background-color: white;
+   border-radius: 20px;
+   margin: 0 auto;
+}
+.main-image{
+   height:400px;
+   width: 1024px;
+   object-fit: cover; 
+/* Pour conserver les proportions de l'image, pensez à la propriété object-fit : cover */
+ }
+/* Navigation */
+nav{
+    /* background-color: red; */
+   height: 100px;
+   display:flex;
+}
+/* Liens de navigations */
+nav a{
+   flex: 1;
+   font-size: 20px;
+   color: #190f33;
+   align-items: center;
+   display:flex;
+   justify-content: center;
+   text-decoration: none;
+ }
+ /* Liens navigation au survol de la souris avec la couleur */
+nav a:hover{
+   color:#1b7a9f;
+ }
+ /* Image principale */
+section{
+    /* Ici, il y a 4 sections dont deux couleurs différentes en fond */
+   padding: 100px;
+   background-color: white;
+ }
+ 
+ /* Attribut id pour identifier les différentes parties
+ de chacunes des sections */
+ #education,
+ #contact{
+ background-color: #eeeef7;
+ }
+/* Section 1 : à propos de moi */
+.infos{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 80px;
+   margin-bottom: 80px;
+ }
+.infos img{
+   height: 250px;
+   width: 250px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: #1b7a9f 3px solid;
+   box-shadow: 5px 10px 30px #888888 ;
+
+ }
+.flip-card{
+   background-color: transparent;
+   width: 250px;
+   height: 250px;
+   perspective: 1000px;
+   margin-right: 10px;
+}
+.flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   border-radius: 50%;
+   
+ }
+ .flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+ }
+ 
+ .flip-card-front, .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   
+ }
+ 
+ .flip-card-front {
+   color: black;
+ }
+ 
+ .flip-card-back {
+   background-color: #1b7a9f;
+   color: white;
+   transform: rotateY(180deg);
+   border-radius: 50%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   border: 3px dotted white;
+ }
+  #details i{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align:center;
+   line-height: 50px;
+ }
+
+ /* Premier bloc div dans la première section */
+ .name,
+ .city{
+    color: #190f33;
+    margin-left: 100px;
+ }
+ .name{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 50px;
+ }
+ .city{
+    font-size: 30px;
+    font-style: italic;
+ }
+/* section 1 et 2 */
+h2, h3 {
+   color: #190f33;
+   font-weight: bold;
+
+}
+/* section 1 */
+ h3{
+    font-size: 26px;
+    margin-bottom:40px;
+ }
+/* section 2 */
+ h2{
+   font-size: 30px;
+   margin-bottom: 80px;
+   text-align: center;
+ }
+
+ #education p{
+   text-align:center;
+ }
+ #education img{
+   height:100px;
+ }
+ #education div{
+   margin-top:100px;
+   margin-bottom:100px;
+   display:flex;
+   justify-content: space-around;
+ }
+ #education span{
+   font-weight: bold;
+ }
+
+ #about-me abbr:hover{
+    color:#1b7a9f;
+    font-weight: bold;
+ }
+
+ /* Section 3 */
+ #projects p{
+   text-align:center;
+
+ }
+
+ /* bloc section 3 concernant la class et aussi l'image à gauche */
+ .project-container{
+   margin-top: 100px;
+   margin-bottom: 150px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+ }
+ .project-container img{
+   width: 500px;
+   margin-right: 60px;
+ }
+
+
+/* bloc à droite pour la section 3 avec un titre et des puces */
+ h4{
+   font-size:18px;
+   font-weight:bold;
+   margin-bottom: 10px;
+ }
+#projects li{
+   line-height: 30px;
+}
+#projects ul{
+   list-style-type: disc;
+}
+
+/* Section 4 : contact */
+#contact img{
+   height:50px;
+   margin-right: 20px;
+   
+}
+#contact{
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+#contact div{
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 50px;
+   margin-bottom: 20px;
+}
+
+#contact img:hover{
+   animation: shake 0.5s; 
+   animation-iteration-count: infinite; 
+}
+
+/* boutons de téléchargments fichier pdf */
+.btn {
+   margin-top:100px;
+   padding-bottom:150px;
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 50px;
+   margin-bottom: 20px;
+   background-color: #1b7a9f;
+   border: none;
+   color: white;
+   padding: 12px 30px;
+   cursor: pointer;
+   font-size: 16px;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   text-decoration:none;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+ /* Darker background on mouse-over */
+
+ .btn:hover {
+   background-color: #90E0EF;
+   color:#1b7a9f;
+ }
+/* Animation: contact (liens images) */
+@keyframes shake{
+   0% { transform: translate(1px, 1px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Footer */
+footer{
+   height: 300px;
+   color:#c4c4c4;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+footer p{
+ line-height: 40px;  
+}
+footer a{
+   display:inline-block;
+   line-height: 40px; 
+   text-decoration: none;
+   color:#90E0EF;
+}
+footer a:hover{
+   color:white;
+}
