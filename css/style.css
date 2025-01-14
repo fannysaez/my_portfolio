@@ -261,19 +261,17 @@ h2, h3 {
 #contact img{
    height:50px;
    margin-right: 20px;
-   
 }
 #contact{
    border-bottom-left-radius: 20px;
    border-bottom-right-radius: 20px;
 }
-
-#contact div{
+#contact .social-links, a{
    display:flex;
    justify-content: space-around;
    align-items: center;
    height: 50px;
-   margin-bottom: 20px;
+   margin-bottom: 50px;
 }
 
 #contact img:hover{
@@ -281,36 +279,41 @@ h2, h3 {
    animation-iteration-count: infinite; 
 }
 
-/* boutons de téléchargments fichier pdf */
+/* Styles généraux pour les boutons */
 .btn {
-   margin-top:100px;
-   padding-bottom:150px;
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-   height: 50px;
-   margin-bottom: 20px;
+   padding: 12px 30px;
+   display: inline-block;
+   text-align: center;
    background-color: #1b7a9f;
    border: none;
    color: white;
-   padding: 12px 30px;
    cursor: pointer;
    font-size: 16px;
-   border-bottom-left-radius: 20px;
-   border-bottom-right-radius: 20px;
-   border-top-left-radius: 20px;
-   border-top-right-radius: 20px;
-   text-decoration:none;
-   text-align: center;
+   border-radius: 20px;
+   text-decoration: none;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
- 
- /* Darker background on mouse-over */
+   width: 45%; /* Ajuste la largeur pour les boutons côte à côte */
+   line-height: 1.5;
+}
 
- .btn:hover {
+.btn:hover {
    background-color: #90E0EF;
-   color:#1b7a9f;
- }
+   color: #1b7a9f;
+}
+
+.btn a {
+   text-decoration: none;
+   color: white;
+}
+
+/* Conteneur des boutons en ligne */
+#contact div {
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+}
+
+
 /* Animation: contact (liens images) */
 @keyframes shake{
    0% { transform: translate(1px, 1px) rotate(0deg); }
