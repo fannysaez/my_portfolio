@@ -330,14 +330,10 @@ a {
    color: white;
 }
 
-/* Menu Dropdown pour mobile */
+/* MENU DROPDOWN : Effet au survol sans JavaScript */
 .dropdown {
    position: relative;
    display: inline-block;
-}
-
-.dropdown-toggle-checkbox {
-   display: none; /* Cacher le checkbox réel */
 }
 
 .dropdown-toggle {
@@ -349,8 +345,8 @@ a {
    font-size: 16px;
    display: inline-block;
    width: 100%;
-   border: 2px solid #1b7a9f;
-   border-radius: 5px;
+   border: 2px solid #1b7a9f; /* Ajoute une bordure de 2px */
+   border-radius: 5px; /* Ajoute un léger arrondi pour la bordure */
 }
 
 .dropdown-toggle:hover {
@@ -358,30 +354,30 @@ a {
    color: #1b7a9f;
 }
 
-/* Style du menu déroulant */
 .dropdown-menu {
+   display: none;
    position: absolute;
    background-color: white;
    min-width: 245px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    top: 100%;
    left: 0;
-   z-index: 10;
+   z-index: 1;
    padding: 10px 0;
+   display: flex;
    flex-direction: column;
    opacity: 0;
    visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
    display: block;
-   transition: opacity 0.3s, visibility 0.3s;
-}
-
-/* Affichage du menu quand le checkbox est coché */
-.dropdown-toggle-checkbox:checked ~ .dropdown-menu {
-   opacity: 1;
    visibility: visible;
+   opacity: 1;
+   transition: opacity 0.3s ease;
 }
 
-/* Style des éléments du menu */
 .dropdown-item {
    padding: 10px 15px;
    color: #1b7a9f;
@@ -393,36 +389,6 @@ a {
 .dropdown-item:hover {
    background-color: #f1f1f1;
    color: #1b7a9f;
-}
-/* Version desktop - activation au survol */
-@media (min-width: 769px) {
-   .dropdown:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-   }
-}
-
-/* Version mobile - activation au tap */
-@media (max-width: 768px) {
-   /* Le checkbox caché qui servira d'état */
-   .dropdown input[type="checkbox"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-   }
-   
-   /* Quand le checkbox est coché, afficher le menu */
-   .dropdown input[type="checkbox"]:checked ~ .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-   }
-   
-   /* Style du menu en version mobile */
-   .dropdown-menu {
-      width: 100%;
-      position: absolute;
-   }
 }
 
 #contact div {
@@ -440,53 +406,6 @@ a {
    }
    100% {
       transform: translate(1px, -2px) rotate(-1deg);
-   }
-}
-
-/* Responsive design pour les écrans plus petits */
-@media (max-width: 1024px) {
-   main {
-      width: 100%;
-      border-radius: 0;
-   }
-   
-   .main-image {
-      width: 100%;
-      height: auto;
-   }
-   
-   section {
-      padding: 50px 20px;
-   }
-   
-   .project-container {
-      flex-direction: column;
-   }
-   
-   .project-container img {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 30px;
-   }
-   
-   .infos {
-      flex-direction: column;
-      margin-right: 0;
-   }
-   
-   .name, .city {
-      margin-left: 0;
-      text-align: center;
-      margin-top: 30px;
-   }
-   
-   #education div {
-      flex-direction: column;
-      align-items: center;
-   }
-   
-   #education img {
-      margin-bottom: 20px;
    }
 }
 
@@ -519,3 +438,4 @@ footer i {
    margin: 5px;
    font-size: 30px;
 }
+
