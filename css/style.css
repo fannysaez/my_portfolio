@@ -330,13 +330,16 @@ a {
    color: white;
 }
 
-/* MENU DROPDOWN : Version améliorée pour desktop et mobile */
+/* Menu Dropdown pour mobile */
 .dropdown {
    position: relative;
    display: inline-block;
 }
 
-/* Style du bouton/toggle */
+.dropdown-toggle-checkbox {
+   display: none; /* Cacher le checkbox réel */
+}
+
 .dropdown-toggle {
    background-color: #1b7a9f;
    color: white;
@@ -372,6 +375,12 @@ a {
    transition: opacity 0.3s, visibility 0.3s;
 }
 
+/* Affichage du menu quand le checkbox est coché */
+.dropdown-toggle-checkbox:checked ~ .dropdown-menu {
+   opacity: 1;
+   visibility: visible;
+}
+
 /* Style des éléments du menu */
 .dropdown-item {
    padding: 10px 15px;
@@ -385,7 +394,6 @@ a {
    background-color: #f1f1f1;
    color: #1b7a9f;
 }
-
 /* Version desktop - activation au survol */
 @media (min-width: 769px) {
    .dropdown:hover .dropdown-menu {
