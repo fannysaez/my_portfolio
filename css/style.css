@@ -289,8 +289,7 @@ h4 {
    border-bottom-right-radius: 20px;
 }
 
-#contact .social-links,
-a {
+#contact .social-links a {
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -301,6 +300,14 @@ a {
 #contact img:hover {
    animation: shake 0.5s;
    animation-iteration-count: infinite;
+}
+
+#contact .social-links {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 60px;
+   margin-bottom: 50px;
 }
 
 .btn {
@@ -353,13 +360,13 @@ a {
 .dropdown-toggle:hover {
    background-color: #90E0EF;
    color: #1b7a9f;
-   transform: translateY(-2px);
+   transform: none;
 }
 
 /* MENU */
 .dropdown-menu {
    position: absolute;
-   top: 110%;
+   top: 100%;
    left: 0;
    width: 100%;
    background-color: #ffffff;
