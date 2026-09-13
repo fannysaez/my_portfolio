@@ -247,8 +247,147 @@ h2 {
 }
 
 /* Section 3 */
-#projects p {
+#projects > p {
    text-align: center;
+}
+
+/* Sous-titres de formation dans la section projets */
+.projects-subtitle {
+   margin-top: 80px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+.projects-subtitle:first-of-type {
+   margin-top: 40px;
+}
+
+/* Grille de cartes projets (nouveau format compact) */
+.project-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+   margin-top: 40px;
+   margin-bottom: 100px;
+}
+
+.project-card {
+   background-color: #eeeef7;
+   border-radius: 20px;
+   padding: 25px;
+   box-shadow: 5px 10px 20px #dddddd;
+   display: flex;
+   flex-direction: column;
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+   transform: translateY(-8px);
+   box-shadow: 8px 18px 30px #bbbbbb;
+}
+
+.project-item {
+   display: flex;
+   flex-direction: column;
+}
+
+.project-item .project-card {
+   flex: 1;
+}
+
+.project-label {
+   text-align: center;
+   font-weight: bold;
+   color: #1b7a9f;
+   font-size: 15px;
+   line-height: 22px;
+   margin-bottom: 15px;
+}
+
+.project-card h3 {
+   font-size: 20px;
+   margin-bottom: 8px;
+}
+
+.project-card h4 {
+   font-size: 15px;
+   color: #1b7a9f;
+   margin-bottom: 12px;
+}
+
+.project-card p {
+   font-size: 15px;
+   line-height: 24px;
+   margin-bottom: 12px;
+   text-align: left;
+}
+
+.project-card ul {
+   margin-bottom: 15px;
+}
+
+.project-card li {
+   font-size: 14px;
+   line-height: 24px;
+}
+
+.tech-badges {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 18px;
+}
+
+.tech-badges img {
+   height: 26px;
+   width: 26px;
+}
+
+.project-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-top: auto;
+}
+
+.project-links a {
+   background-color: #1b7a9f;
+   color: white;
+   text-decoration: none;
+   padding: 8px 18px;
+   border-radius: 20px;
+   font-size: 14px;
+}
+
+.project-links a:hover {
+   background-color: #90E0EF;
+   color: #1b7a9f;
+}
+
+.project-soon {
+   font-size: 14px;
+   font-style: italic;
+   color: #888888;
+}
+
+/* Documentation personnelle en bas de section projets */
+.doc-perso {
+   margin-top: 80px;
+   text-align: center;
+}
+
+.doc-perso h4 {
+   margin-bottom: 15px;
+}
+
+.doc-perso .project-links {
+   justify-content: center;
+}
+
+@media (max-width: 900px) {
+   .project-grid {
+      grid-template-columns: 1fr;
+   }
 }
 
 .project-container {
@@ -320,7 +459,8 @@ h4 {
    font-size: 16px;
    text-decoration: none;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   width: 26%;
+   width: auto;
+   white-space: nowrap;
    line-height: 1.5;
    margin-bottom: 0.7px;
    border: 2px solid #1b7a9f; /* Ajoute une bordure de 2px */
