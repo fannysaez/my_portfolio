@@ -309,6 +309,13 @@ h2 {
    margin-bottom: 8px;
 }
 
+.project-logo {
+   width: 24px;
+   height: 24px;
+   vertical-align: middle;
+   margin-right: 6px;
+}
+
 .project-card h4 {
    font-size: 15px;
    color: #1b7a9f;
